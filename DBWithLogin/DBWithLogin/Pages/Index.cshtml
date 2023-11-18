@@ -1,0 +1,33 @@
+﻿@page
+@model IndexModel
+
+@{
+    if (User?.Identity?.IsAuthenticated == true)
+    {
+        if (User.IsInRole("Admin"))
+        {
+            Response.Redirect("/AddContact");
+            return;
+        }
+        Response.Redirect("/ContactsList");
+        return;
+    }
+}
+
+<div class="card mb-3 login-form">
+    <div class="card-body">
+        <form method="post" asp-page="/Index" asp-page-handler="Login">
+            @Html.AntiForgeryToken()
+
+            <div class="mb-3">
+                <input type="text" class="form-control" placeholder="Username" id="usernameInput" name="LoginInput.Username" required>
+            </div>
+
+            <div class="mb-3">
+                <input type="password" class="form-control" placeholder="Password" id="passwordInput" name="LoginInput.Password" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+    </div>
+</div>

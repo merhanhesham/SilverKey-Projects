@@ -1,0 +1,53 @@
+﻿@page
+@model OpmlRender.Pages.FavoritesModel
+@{
+    ViewData["Title"] = "Favorite Feeds";
+}
+
+<div class="container">
+    <h1 class="my-5">Favorite Feeds</h1>
+    @if (Model.FavoriteRssList.Count > 0)
+    {
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            @foreach (var item in Model.FavoriteRssList)
+            {
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">@item.Title</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">@item.PubDate</h6>
+                            <p class="card-text">@Html.Raw(@item.Description)</p>
+                            <a href="@item.Link" class="btn btn-outline-primary" target="_blank">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+        <nav class="my-5">
+            <ul class="pagination justify-content-center">
+                @if (Model.PageNumber > 1)
+                {
+                    <li class="page-item">
+                        <a class="page-link" href="@Url.Page("/Favorites?", new { pageNumber = Model.PageNumber - 1, pageSize = Model.PageSize } )">Previous</a>
+                    </li>
+                }
+                @for (int i = 1; i <= Model.TotalPages; i++)
+                {
+                    <li class="page-item @(i == Model.PageNumber ? "active" : "")">
+                        <a class="page-link" href="@Url.Page("/Favorites?", new { pageNumber = i, pageSize = Model.PageSize } )">@i</a>
+                    </li>
+                }
+                @if (Model.PageNumber < Model.TotalPages)
+                {
+                    <li class="page-item">
+                        <a class="page-link" href="@Url.Page("/Favorites?", new { pageNumber = Model.PageNumber + 1, pageSize = Model.PageSize } )">Next</a>
+                    </li>
+                }
+            </ul>
+        </nav>
+    }
+    else
+    {
+        <h3 class="my-5">There's No Favorite Feeds.</h3>
+    }
+</div>

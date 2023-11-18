@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Current Time Service</title>
+</head>
+<body>
+    <h2 id="current-time"></h2>
+    <script>
+        async function getCurrentTime() {
+            let res = await fetch('/api/current-time')
+            let finalRes = await res.text();
+            const currentTime = document.getElementById('current-time')
+            currentTime.innerHTML = finalRes
+        }
+        getCurrentTime();
+    </script>
+</body>
+</html>

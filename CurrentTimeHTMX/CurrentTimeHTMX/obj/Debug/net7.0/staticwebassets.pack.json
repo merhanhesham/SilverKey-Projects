@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\SOUQ ALCOMPUMARTS\\source\\repos\\CurrentTimeHTMX\\CurrentTimeHTMX\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.CurrentTimeHTMX.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.CurrentTimeHTMX.props",
+      "PackagePath": "build\\CurrentTimeHTMX.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.CurrentTimeHTMX.props",
+      "PackagePath": "buildMultiTargeting\\CurrentTimeHTMX.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.CurrentTimeHTMX.props",
+      "PackagePath": "buildTransitive\\CurrentTimeHTMX.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

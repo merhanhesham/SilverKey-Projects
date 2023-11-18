@@ -1,0 +1,60 @@
+﻿@page
+@model ContactsListModel
+
+<h2 class="text-center">Contact List</h2>
+<p>Search for a contact:</p>
+<input class="form-control" id="Input" type="text" placeholder="Search...">
+<br>
+<table class="table table-striped table-bordered table-hover">
+    <thead class="table-info">
+        <tr>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Title</th>
+            <th scope="col">Birth Date</th>
+            <th scope="col">Marital Status</th>
+            <th scope="col">Description</th>
+        </tr>
+    </thead>
+    <tbody id="Table">
+        @foreach (var contact in Model.ContactsList)
+        {
+            <tr>
+                <td>@contact.FirstName</td>
+                <td>@contact.LastName</td>
+                <td>@contact.Email</td>
+                <td>@contact.Title</td>
+                <td>@contact.BirthDate</td>
+                <td>@(contact.MaritalStatus ? "Married" : "Single")</td>
+                <td>@contact.Description</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            var input = $("#Input");
+            var table = $("#Table");
+            var rows = $("tr", table);
+
+            input.on("input", function () {
+                var filter = input.val().trim().toLowerCase();
+                rows.each(function () {
+                    var cells = $("td", this);
+                    var visible = false;
+                    cells.each(function () {
+                        var cellText = $(this).text().trim().toLowerCase();
+                        if (cellText.includes(filter)) {
+                            visible = true;
+                            return false;
+                        }
+                    });
+                    $(this).toggle(visible);
+                });
+            });
+        });
+    </script>
+}

@@ -1,0 +1,323 @@
+body{
+    background-color: #f5f5f5;
+    
+}
+.home{
+    background-image: linear-gradient(120deg, #e6e6ff, #bda4fe 24%, #9870ff 53%, #aa8cf8 78%, #ab92e4);;
+    background-position: center center;
+    background-size: cover;
+    font-family: Brown-Italic, sans-serif;
+}
+
+.caption h1{
+    font-size:70px;
+    
+}
+
+.caption h2::after{
+    content: "";
+    animation: movingtext 5s linear infinite;
+}
+.my-img{
+    border: black 40px solid ;
+    border-radius: 10px;
+}
+
+@keyframes movingtext {
+     0% {
+        content: "W";
+     }
+     3% {
+        content: "We";
+     }
+     6% {
+        content: "Web";
+     }
+     9% {
+        content: "Web ";
+     }
+     12% {
+        content: "Web D";
+     }
+     15% {
+        content: "Web De";
+     }
+     18% {
+        content: "Web Dev";
+     }
+     21% {
+        content: "Web Deve";
+     }
+     24% {
+        content: "Web Devel";
+     }
+     27% {
+        content: "Web Develo";
+     }
+     30% {
+        content: "Web Develop";
+     }
+     33% {
+        content: "Web Develope";
+     }
+     36% {
+        content: "Web Developer";
+     }
+     39% {
+        content: "Web Develope";
+     }
+     42% {
+        content: "Web Develop";
+     }
+     45% {
+        content: "Web Develo";
+     }
+     47% {
+        content: "Web Devel";
+     }
+     49% {
+        content: "Web Deve";
+     }
+     52% {
+        content: "Web Dev";
+     }
+     55% {
+        content: "Web De";
+     }
+     58% {
+        content: "Web D";
+     }
+     61% {
+        content: "Web ";
+     }
+     64% {
+        content: "We";
+     }
+     67% {
+        content: "W";
+     }
+     70% {
+        content: "";
+     }
+     72% {
+        content: "S";
+     }
+     73% {
+        content: "So";
+     }
+     74% {
+        content: "Sof";
+     }
+     75% {
+        content: "Soft";
+     }
+     76% {
+        content: "Soft";
+     }
+     77% {
+        content: "Softw";
+     }
+     78% {
+        content: "Softwa";
+     }
+     79% {
+        content: "Softwar";
+     }
+     80% {
+        content: "Software";
+     }
+     81% {
+        content: "Software ";
+     }
+     82% {
+        content: "Software E";
+     }
+     
+     83% {
+        content: "Software En";
+     }
+     
+     84% {
+        content: "Software Eng";
+     }
+     85% {
+        content: "Software Engi";
+     }
+     86% {
+        content: "Software Engin";
+     }
+     87% {
+        content: "Software Engine";
+     }
+     88% {
+        content: "Software Enginee";
+     }
+     89% {
+        content: "Software Engineer";
+     }
+     
+     
+     
+}
+/*--------------navbar-------------------*/
+
+.navbar-nav{
+    margin-right: 200px;
+    font-weight: 600;
+}
+.nav-item a{
+   position: relative;
+}
+.navbar{
+    background-color: black;
+}
+.nav-link {
+    color: white;
+}
+.nav-link:hover{
+    color: #9870ff;
+}
+
+@media screen and (max-width:992px){
+    .nav-item ::after, .nav-item .nav-item-after:hover::after{
+        opacity: 0;
+    }
+}
+/*-----------------------------------end navbar----------------------*/
+.social-media{
+    
+    width: 45px;
+    height: 45px;
+    border: #9870ff solid 3px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+.social-media span:hover{
+    color: #9870ff;
+}
+.social-media span{
+    transition: 0.7s;
+}
+.box-div{
+    width: 85%;
+    min-height: 85%;
+
+}
+.progress, .progress-stacked {
+    
+    --bs-progress-border-radius: 0;
+    --bs-progress-bar-bg:#9870ff ;
+    background-color: #CDE1F8;
+    width: 100%;
+}
+.below-content .text span{
+    float: right;
+}
+
+/*-------------------work-------------------------------*/
+.work .col-md-3{
+    border-radius: 1rem;
+    padding:30px 0;
+}
+.box-shadow{
+    box-shadow: 0 13px 8px -10px rgb(0 0 0 / 10%);
+}
+.work .col-md-3:hover{
+  transform: scale(1.05,1.05);
+}
+.work .col-md-3{
+   transition: 0.5s;
+}
+.img-div{
+    background-image: url(./images-dev/post-3.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+.work-data .bglayer{
+    padding: 120px;
+    background-color: rgba(0,120,255,0.7); 
+
+}
+.work-icons{
+    border: #ffffff solid 10px;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin: auto;
+}
+.work-data .col-md-3{
+   padding: 0 80px;
+}
+
+.work-icon-div{
+    width: 120px;
+    height: 120px;
+    border: #9870ff solid 10px;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.work-icon-div i{
+    transition: 0.5s;
+}
+
+.work-icon-div:hover{
+    background-color: #9870ff;
+    border-color: #CDE1F8;
+}
+.work-icon-div:hover i{
+    color: white;
+}
+ 
+
+
+
+/*--------------------------contact-------------------------------*/
+.contact{
+    background-image: linear-gradient(120deg, #e6e6ff, #bda4fe 24%, #9870ff 53%, #aa8cf8 78%, #ab92e4);;
+    background-position: center center;
+    background-size: cover;
+}
+.contact-bglayer{
+   
+    padding-top:100px; 
+    padding-bottom: 50px;
+   
+}
+
+.contact .form-group{
+    margin: 35px 0; 
+}
+.form-control{
+    border-color:#ced4da;
+}
+
+.contact button{
+    border-radius: 5rem;
+    padding: 15px 35px;
+    background-color: #9870ff;
+    transition: 0.5s;
+}
+
+
+
+/***********media******************/
+@media (max-width:769px){
+   .home .col-md-5, .box-div{
+      margin-top: 100px;
+   }
+   .skills{
+      margin-top: 30px;
+   }
+   .box-div, .home .imgdiv{
+      margin-bottom: 70px;
+   }
+   .about .imgdiv, .work .col-md-3{
+      margin-bottom: 20px;
+   }
+   .work .col-md-3{
+      columns: md -2;
+   }
+
+
+}
